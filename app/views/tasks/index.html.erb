@@ -2,6 +2,6 @@
   <% @tasks.each do |task|  %>
     <li><%= "[]" if task.completed == false %>
         <%="[X]" if task.completed == true %>
-      <%= task.title %></li>
+      <%=link_to task.title, show_path(task.id) %></li>
 <% end %>
 </ul>

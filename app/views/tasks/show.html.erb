@@ -1,0 +1,5 @@
+<h1><%= @task.title %></h1>
+<h2><%= @task.details %></h2>
+<p>Status: <%=@task.completed ? "Done" : "Undone" %></p>
+
+<%= link_to "Back to all", index_path %>
