@@ -1,9 +1,13 @@
-<h1><%= @task.title %></h1>
-<h2><%= @task.details %></h2>
-<p>Status: <%=@task.completed ? "Done" : "Undone" %></p>
+<div class="container text-center">
+  <div class="task-detail"><h1><%= @task.title %></h1>
+    <div class="task-text-area">
+      <h3><%= @task.details %></h3>
+    </div>
+    <p>Status: <%=@task.completed ? "Done" : "Undone" %></p>
 
-<%= link_to "Edit this task", tasks_edit_path %>
-<%= link_to "Delete this task", task_path(@task),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-<%= link_to "Back to all", tasks_path %>
+    <%= link_to "Edit this task", tasks_edit_path, class: 'btn btn-info' %>
+    <%= link_to "Delete this task", task_path(@task), class: 'btn btn-danger' ,
+          method: :delete,
+          data: { confirm: "Are you sure?" } %>
+    <%= link_to "Back to all", tasks_path, class: 'btn btn-success'  %></div>
+</div>

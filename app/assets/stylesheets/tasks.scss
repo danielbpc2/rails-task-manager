@@ -1,3 +1,61 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: rgb(30,30,30);
+}
+.container {
+
+}
+.card {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 20px;
+  margin: 20px;
+  background-color: rgb(100,100,100);
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.card-status {
+
+}
+
+.card-title {
+  flex-grow: 1;
+  margin: 0;
+  padding-left: 10px;
+
+}
+
+.card-delete {
+
+}
+
+.form-container {
+  margin: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  background-color: rgb(100,100,100);
+  color: white;
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+.task-detail{
+  margin: 20px;
+  padding: 40px;
+  border-radius: 5px;
+  background-color: rgb(100,100,100);
+  color: white;
+  font-weight: bolder;
+ }
+
+.task-text-area {
+  background-color: rgb(50,50,50);
+  border-radius: 6px;
+}

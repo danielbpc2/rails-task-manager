@@ -1,13 +1,20 @@
-<ul>
-  <% @tasks.each do |task|  %>
-    <li><%= "[]" if task.completed == false %>
-        <%="[X]" if task.completed == true %>
-      <%=link_to task.title, task_path(task.id) %>
-      <%= link_to "Delete", task_path(task),
-      method: :delete,
-      data: { confirm: "Are you sure?" } %>
-      </li>
-<% end %>
-</ul>
+<div class="wrapper-black">
+  <div class="container text-center">
+      <% @tasks.each do |task|  %>
+    <div class="card text-left">
+        <div class="card-status"><% if task.completed == false %>
+          <i class="far fa-square"></i>
+          <% end %>
+          <%if task.completed == true %>
+          <i class="far fa-check-square"></i>
+          <% end %></div>
+       <div class="card-title"> <%=link_to task.title, task_path(task.id) %></div>
+        <div class="card-delete"><%= link_to '<i class="fas fa-trash-alt"></i>'.html_safe, task_path(task),
+          method: :delete,
+          data: { confirm: "Are you sure?" } %></div>
+    </div>
+      <% end %>
+    <%= link_to "Create a new task", tasks_new_path, class: 'btn btn-primary btn-lg' %>
+    </div>
+</div>
 
-<%= link_to "Create a new task", tasks_new_path %>
