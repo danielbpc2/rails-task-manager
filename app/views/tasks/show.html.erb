@@ -3,5 +3,7 @@
 <p>Status: <%=@task.completed ? "Done" : "Undone" %></p>
 
 <%= link_to "Edit this task", tasks_edit_path %>
-
+<%= link_to "Delete this task", task_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
 <%= link_to "Back to all", tasks_path %>
