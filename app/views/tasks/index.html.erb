@@ -1,0 +1,7 @@
+<ul>
+  <% @tasks.each do |task|  %>
+    <li><%= "[]" if task.completed == false %>
+        <%="[X]" if task.completed == true %>
+      <%= task.title %></li>
+<% end %>
+</ul>
