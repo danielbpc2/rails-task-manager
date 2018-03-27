@@ -2,4 +2,6 @@
 <h2><%= @task.details %></h2>
 <p>Status: <%=@task.completed ? "Done" : "Undone" %></p>
 
-<%= link_to "Back to all", index_path %>
+<%= link_to "Edit this task", tasks_edit_path %>
+
+<%= link_to "Back to all", tasks_path %>

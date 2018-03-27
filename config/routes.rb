@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   # read all
-  get 'tasks', to: 'tasks#index', as: 'index'
+  get 'tasks', to: 'tasks#index', as: 'tasks'
   # read one
-  get 'tasks/:id', to: 'tasks#show', as: 'show'
+  get 'tasks/:id', to: 'tasks#show', as: 'task'
   # CREATE
   get 'new', to: 'tasks#new', as: 'tasks_new'
 
   post 'tasks', to: 'tasks#create'
   # update
+  get 'tasks/:id/edit', to: 'tasks#edit', as: 'tasks_edit'
 
+  patch 'tasks/:id', to: 'tasks#update'
   # destroy
 end
